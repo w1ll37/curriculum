@@ -1,5 +1,5 @@
 ### Introduction
-In our JavaScript fundamentals course, you should have learned the [basics of using objects](https://www.theodinproject.com/courses/web-development-101/lessons/fundamentals-part-5) to store and retrieve data. Let's start with a little refresher.
+In our JavaScript fundamentals course, you should have learned the [basics of using objects](https://www.theodinproject.com/courses/foundations/lessons/fundamentals-part-5) to store and retrieve data. Let's start with a little refresher.
 
 There are multiple ways to define objects but in most cases, it is best to use the __object literal__ syntax as follows:
 
@@ -33,7 +33,7 @@ myObject.variable // this gives us 'undefined' because it's looking for a proper
 myObject[variable] // this is equivalent to myObject['property'] and returns 'Value!'
 ~~~
 
-If you are feeling rusty on using objects, now might be a good time to go back and review the content in [__Fundamentals 5__](https://www.theodinproject.com/courses/web-development-101/lessons/fundamentals-part-5) from our JavaScript 101 course.
+If you are feeling rusty on using objects, now might be a good time to go back and review the content in [__Fundamentals 5__](https://www.theodinproject.com/courses/foundations/lessons/fundamentals-part-5) from our JavaScript 101 course.
 
 ### Learning Outcomes
 By the end of this lesson, you should be able to do the following:
@@ -132,12 +132,12 @@ player2.sayName() // logs 'also steve'
 
 ### Exercise
 
-Write a constructor for making "book" objects. We will revisit this in the project at the end of this lesson. Your book objects should have the book's `title`, `author`, the number of `pages`, and whether or not you have `read` the book
+Write a constructor for making "Book" objects. We will revisit this in the project at the end of this lesson. Your book objects should have the book's `title`, `author`, the number of `pages`, and whether or not you have `read` the book
 
-Put a function into the constructor that can report the book info like so
+Put a function into the constructor that can report the book info like so:
 
 ~~~javascript
-book.info() // "The Hobbit by J.R.R. Tolkien, 295 pages, not read yet"
+theHobbit.info() // "The Hobbit by J.R.R. Tolkien, 295 pages, not read yet"
 ~~~
 
 note: it is almost _always_ best to `return` things rather than putting `console.log()` directly into the function. In this case, return the `info` string and log it after the function has been called:
@@ -152,7 +152,7 @@ Before we go much further, there's something important you need to understand ab
 
 This concept is an important one, so you've got some reading to do. Make sure you really get this before moving on!
 
-1. [This article](https://javascriptissexy.com/javascript-prototype-in-plain-detailed-language/) is a straightforward introduction and demonstration of the concept. It also covers constructors again.. good time for a review! The important bits here, once you've covered the basics are 'Prototype-based inheritance' and the 'Prototype chain'
+1. [This article](https://web.archive.org/web/20200513181548/https://javascriptissexy.com/javascript-prototype-in-plain-detailed-language/) is a straightforward introduction and demonstration of the concept. It also covers constructors again.. good time for a review! The important bits here, once you've covered the basics are 'Prototype-based inheritance' and the 'Prototype chain'
 2. To go a bit deeper into both the chain and inheritance spend some time with [this great article](http://javascript.info/prototype-inheritance). As usual, doing the exercises at the end will help cement this knowledge in your mind. Don't skip them! Important note: this article makes heavy use of `__proto__` which is not generally recommended. The concepts here are what we're looking for at the moment. We will soon learn another method or two for setting the prototype.
 
 If you've understood the concept of the prototype then this next bit about constructors will not be confusing at all!
@@ -238,3 +238,11 @@ carl.sayName() //uh oh! this logs "HAHAHAHAHAHA" because we edited the sayName f
 ~~~
 
 If we had used `Object.create` in this example then we could safely edit the `NinthGrader.prototype.sayName` function without changing the function for `EighthGrader` as well.
+
+### Additional Resources
+This section contains helpful links to other content. It isn't required, so consider it supplemental for if you need to dive deeper into something.
+
+* [This article](https://dev.to/lydiahallie/javascript-visualized-prototypal-inheritance-47co) from Lydia Hallie and [This video](https://www.youtube.com/watch?v=sOrtAjyk4lQ) from Avelx explains the Prototype concept with graphics and simple language. Try using these resources if you want another perspective to understand the concept.
+* [This Video](https://www.youtube.com/watch?v=CDFN1VatiJA) from mpj explains `Object.create` method with great details about it, he walk through what it is, why `Object.create` exists in JavaScript, and how to use `Object.create`. Also you can check [This Video](https://www.youtube.com/watch?v=MACDGu96wrA) from techsith to understand another point of view of extending objects from others by `Object.create`.
+* [The Principles of Object-Oriented JavaScript](https://www.amazon.com/Principles-Object-Oriented-JavaScript-Nicholas-Zakas/dp/1593275404) book by 
+Nicholas C. Zakas is really great to understand OOP in javascript, which explains concepts simply and in-depth, which explores JavaScript's object-oriented nature, revealing the language's unique implementation of inheritance and other key characteristics, it's not free but it's very valuable.

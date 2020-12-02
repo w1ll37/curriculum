@@ -14,7 +14,7 @@ The other key component is that each request uses one of four main "verbs" -- GE
 
 ### REST
 
-REST is a term that you'll see coming up again and again because it's a very powerful idea.  It basically says that there are really only 7 different types of things that you usually want to do to an individual resource via the web and you can do them by mixing and matching the HTTP verbs we just covered.  A "resource" usually means a "thing" in your database or a data model.  In this case, we'll assume that resource is a blog Post model that you've set up:
+REST (short for Representational state transfer) is a term that you'll see coming up again and again because it's a very powerful idea.  It basically says that there are really only 7 different types of things that you usually want to do to an individual resource via the web and you can do them by mixing and matching the HTTP verbs we just covered.  A "resource" usually means a "thing" in your database or a data model.  In this case, we'll assume that resource is a blog Post model that you've set up:
 
 1. GET all the posts (aka **"index"** the posts)
 2. GET just one specific post (aka **"show"** that post)
@@ -93,7 +93,7 @@ But we get ahead of ourselves a bit here... the main point is that you'll see "A
 
 ### Cookies
 
-You've heard about cookies.  Cookies are basically a way for websites to remember who you are from one request to another.  Remember -- every HTTP request is totally independent of each other one.  Meaning that when you go to the Home page of a website and then click on a link to their About page, the web server treats you as a completely new user.
+You've heard about cookies.  Cookies are basically a way for websites to remember who you are from one request to another.  Remember -- every HTTP request is totally independent of each other.  Meaning that when you go to the Home page of a website and then click on a link to their About page, the web server treats you as a completely new user.
 
 ...Unless they've given you some cookies (which they almost certainly have).  Cookies are little bits of data that your browser sends to the website every time you make a request to it.  From the perspective of the web server, it lets the server identify you as the same person who made any of a series of previous requests.  It preserves the *state* of your session.
 
